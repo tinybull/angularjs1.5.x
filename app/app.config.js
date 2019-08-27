@@ -8,29 +8,28 @@ angular.module('app')
                 url: "/app",
                 templateUrl: 'layout/layout.html'
             })
-            .state('app.mongoDB', {
+            .state('app.mongodb', {
                 parent: "app",
-                url: "/mongoDB",
-                templateUrl: 'mongoDB/query/query.html',
-                controller: 'MongoDBQueryCtrl',
+                url: "/mongodb",
+                template: '<mongodb-query></mongodb-query>',
                 data: {}
             })
-            .state('app.mongoDB.service', {
+            .state('app.mongodb.service', {
                 parent: "app",
                 url: "/mongoDBService",
-                templateUrl: 'mongoDB/create/create.html',
+                templateUrl: 'mongodb/create/create.html',
                 controller: 'MongoDBCreateCtrl',
                 data: {}
             })
-            .state('app.mongoDB.detail', {
+            .state('app.mongodb.detail', {
                 parent: "app",
-                url: "/mongoDB/serviceDetail",
-                templateUrl: 'mongoDB/detail/detail.html',
+                url: "/mongodb/detail",
+                templateUrl: 'mongodb/detail/detail.html',
                 controller: 'MongoDBDetailCtrl',
                 data: {}
             });
 
 
         //the default state is home state
-        $urlRouterProvider.otherwise('/app/mongoDB');
+        $urlRouterProvider.otherwise('/app/mongodb');
     });

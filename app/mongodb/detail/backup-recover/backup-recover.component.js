@@ -1,11 +1,14 @@
-angular.module("mongoDB")
+angular.module("mongodb")
     .directive("backupRecover", ['$templateCache', function ($templateCache) {
         return {
             restrict: 'E',
             controller: 'BackupRecoverCtrl',
             scope: {},
-            templateUrl: 'mongoDB/detail/backup-recover/backup-recover.html',
-            // template: $templateCache.get('tree.html'),
+            template: `
+                <div>
+                    <button class="btn btn-default" ng-click="openModal()">Modal</button>
+                </div>
+            `,
             replace: true,
             link: function (scope, iElement, iAttrs, controller) {
 
@@ -17,7 +20,7 @@ angular.module("mongoDB")
         $scope.openModal = function () {
             var modalInstance = $uibModal.open({
                 animation: true,
-                templateUrl: 'mongoDB/detail/backup-recover/confirm-backup.html',
+                templateUrl: 'mongodb/detail/backup-recover/confirm-backup.html',
                 controller: 'ModalConfirmBackupCtrl',
                 size: 800,
                 resolve: {

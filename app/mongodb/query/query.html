@@ -1,4 +1,5 @@
 <div class="panel">
+    {{$ctrl.name}}
     <div class="row">
         <div class="col-md-12">
             <h2>MongoDB服务</h2>
@@ -55,7 +56,7 @@
         <div class="col-md-6">
             共<span class="pagination-font">{{totalRow}}</span>条
             <select ng-model="pageSize" ng-options="option for option in [10,20,30,50]"
-                            ng-change="pageChanged()"></select>
+                    ng-change="pageChanged()"></select>
         </div>
         <div class="col-md-6" style="text-align: right;">
             <nav aria-label="...">

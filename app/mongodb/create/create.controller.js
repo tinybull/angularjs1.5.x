@@ -1,11 +1,11 @@
 'use strict';
 
-angular.module('mongoDB')
+angular.module('mongodb')
     .controller('MongoDBCreateCtrl', ['$scope','$state', function ($scope,$state) {
 
         console.log('MongoDBCreateCtrl');
 
         $scope.createService = function () {
-            $state.go('app.mongoDB');
+            $state.go('app.mongodb');
         }
     }]);

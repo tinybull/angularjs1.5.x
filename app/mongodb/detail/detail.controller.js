@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mongoDB')
+angular.module('mongodb')
     .controller('MongoDBDetailCtrl', ['$scope', function (scope) {
 
     }]);

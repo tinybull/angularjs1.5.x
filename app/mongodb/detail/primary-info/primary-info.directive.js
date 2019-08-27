@@ -1,12 +1,12 @@
 'use strict';
 
-angular.module("mongoDB")
+angular.module("mongodb")
     .directive("primaryInfo", ['$templateCache', function ($templateCache) {
         return {
             restrict: 'E',
             controller: 'PrimaryInfoCtrl',
             scope: {},
-            templateUrl: 'mongoDB/detail/primary-info/primary-info.html',
+            templateUrl: 'mongodb/detail/primary-info/primary-info.html',
             // template: $templateCache.get('tree.html'),
             replace: true,
             link: function (scope, iElement, iAttrs, controller) {
