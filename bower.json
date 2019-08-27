@@ -11,6 +11,7 @@
     "angular-resource": "~1.5.3",
     "angular-ui-router": "0.2.18",
     "bootstrap-sass": "~3.3.5",
+    "bootstrap": "3.3.7",
     "modernizr": "2.8.x",
     "moment": "~2.10.6",
     "underscore": "~1.7.0",

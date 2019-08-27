@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+
+</head>
+<body>
+
+<div ui-view>
+
+</div>
+
+<!-- third party dependencies -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+<!-- sources -->
+<script src="app.module.js"></script>
+<script src="mongoDB/mongoDB.module.js"></script>
+<script src="app.config.js"></script>
+
+<script src="mongoDB/query/query.controller.js"></script>
+<script src="mongoDB/create/create.controller.js"></script>
+<script src="mongoDB/detail/detail.controller.js"></script>
+<script src="mongoDB/detail/backup-recover/backup-recover.directive.js"></script>
+
+
+<script src="mongoDB/detail/primary-info/primary-info.directive.js"></script>
+
+
+<script src="boot.js"></script>
+
+</body>
+</html>
