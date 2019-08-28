@@ -8,12 +8,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
 
+    <link rel="stylesheet" href="app.css">
+
 </head>
 <body>
 
-<div ui-view>
-
-</div>
+<div ui-view></div>
 
 <!-- third party dependencies -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -25,18 +25,17 @@
 
 <!-- sources -->
 <script src="app.module.js"></script>
-<script src="mongodb/mongodb.module.js"></script>
 <script src="app.config.js"></script>
+<script src="mongodb/mongodb.module.js"></script>
+<script src="mongodb/mongodb.route.js"></script>
 
 <script src="mongodb/query/query.component.js"></script>
-<script src="mongodb/create/create.controller.js"></script>
+<script src="mongodb/create/create.component.js"></script>
 <script src="mongodb/detail/detail.controller.js"></script>
 <script src="mongodb/detail/backup-recover/backup-recover.component.js"></script>
-
-
 <script src="mongodb/detail/primary-info/primary-info.directive.js"></script>
 
-
+<!-- bootstrap app -->
 <script src="boot.js"></script>
 
 </body>
