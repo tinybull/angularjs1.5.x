@@ -6,7 +6,6 @@ angular.module('mongodb')
             restrict: 'E',
             controller: 'mongodbQueryCtrl',
             scope: {},
-            // templateUrl: 'mongodb/query/query.html',
             template: $templateCache.get('mongodb/template/query/query.html'),
             replace: false,
             link: function (scope, iElement, iAttrs, controller) {
@@ -19,6 +18,7 @@ angular.module('mongodb')
         };
     }])
     .run(["$templateCache", function ($templateCache) {
+        // language=HTML
         $templateCache.put("mongodb/template/query/query.html", `
             <div class="container-fluid">
                 <div class="row">
@@ -34,41 +34,42 @@ angular.module('mongodb')
                         </button>
                     </div>
                     <div class="col-md-6" style="text-align: right;">
-                        <form class="form-inline">                      
-                        <div class="form-group has-feedback">
-                            <input type="text" class="form-control" >
-                            <span class="glyphicon glyphicon-search form-control-feedback" style="pointer-events: auto;cursor: pointer;z-index: 4;"></span>
-                        </div>
+                        <form class="form-inline">
+                            <div class="form-group has-feedback">
+                                <input type="text" class="form-control">
+                                <span class="glyphicon glyphicon-search form-control-feedback"
+                                      style="pointer-events: auto;cursor: pointer;z-index: 4;"></span>
+                            </div>
                         </form>
                     </div>
                 </div>
                 <table class="table table-hover">
-                            <thead>
-                            <tr>
-                                <th>序号</th>
-                                <th>服务名称</th>
-                                <th>状态</th>
-                                <th>服务规格</th>
-                                <th>创建时间</th>
-                                <th>操作</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr ng-repeat="s in services">
-                                <td>{{org.no}}</td>
-                                <td>
-                                    <a href="" ng-click="openDetail(org.no)">{{org.name}}</a>
-                                </td>
-                                <td>{{org.orgGrade.name}}</td>
-                                <td>{{org.address}}</td>
-                                <td>{{org.superOrg.name}}</td>
-                                <td>
-                                    <a href="" ng-click="delOrg(org)" class="a-delete">&nbsp;删除</a>&nbsp;
-                                    <a href="" ng-click="openOrgMod(org)"></span>&nbsp;修改</a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>服务名称</th>
+                        <th>状态</th>
+                        <th>服务规格</th>
+                        <th>创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="s in services">
+                        <td>{{org.no}}</td>
+                        <td>
+                            <a href="" ng-click="openDetail(org.no)">{{org.name}}</a>
+                        </td>
+                        <td>{{org.orgGrade.name}}</td>
+                        <td>{{org.address}}</td>
+                        <td>{{org.superOrg.name}}</td>
+                        <td>
+                            <a href="" ng-click="delOrg(org)" class="a-delete">&nbsp;删除</a>&nbsp;
+                            <a href="" ng-click="openOrgMod(org)"></span>&nbsp;修改</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
                 <div class="row">
                     <div class="col-md-6">
                         共<span class="pagination-font">{{totalRow}}</span>条

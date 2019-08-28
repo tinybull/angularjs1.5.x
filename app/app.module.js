@@ -1,4 +1,9 @@
 'use strict';
 
 // Define the `mongodb` module
-angular.module('app', ['ngAnimate', 'ui.router', 'mongodb']);
+angular.module('app', [
+    'ngAnimate',
+    'ui.router',
+    'layout',
+    'mongodb'
+]);

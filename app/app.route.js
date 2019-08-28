@@ -6,9 +6,10 @@ angular.module('app')
         $stateProvider
             .state('app', {
                 url: "/app",
-                templateUrl: 'layout/layout.html'
+                template: '<default-layout></default-layout>',
+                // templateUrl: 'layout/default/default-layout.html'
             });
 
-        //the default state is home state
+        // default state
         $urlRouterProvider.otherwise('/app/mongodb');
     });

@@ -6,8 +6,7 @@ angular.module('mongodb')
             restrict: 'E',
             controller: 'mongodbCreateCtrl',
             scope: {},
-            // template: $templateCache.get('mongodb/template/create/create.html'),
-            templateUrl: 'mongodb/create/create.html',
+            template: $templateCache.get('mongodb/template/create/create.html'),
             replace: false,
             controllerAs: '$ctrl',
             link: function (scope, iElement, iAttrs, controller) {
@@ -23,9 +22,10 @@ angular.module('mongodb')
         }
     }])
     .run(['$templateCache', function ($templateCache) {
+        // language=HTML
         $templateCache.put('mongodb/template/create/create.html', `
-           <div class="container-fluid">
-               <form class="form-horizontal">
+            <div class="container-fluid">
+                <form class="form-horizontal">
                     <h3>创建服务</h3>
                     <h4>基本配置</h4>
                     <div class="form-group">
@@ -160,7 +160,7 @@ angular.module('mongodb')
                         </div>
                     </div>
                 </form>
-           </div> 
+            </div>
         `);
     }]);
 
